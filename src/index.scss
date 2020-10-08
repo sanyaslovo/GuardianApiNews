@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+a {
+  color: inherit;
+}
+
+.news {
+  max-width: 800px;
+  margin: 0 auto;
+
+  &__title {
+    text-align: center;
+  }
+}
+
+.news-list {
+  width: 100%;
+  &__item {
+    display: block;
+    border: 2px solid #000;
+    font-weight: 500;
+    padding: 0 10px;
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+
+    &.is-active {
+      .news-list__header-icon {
+        transform: rotate(270deg);
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__header-icon {
+    display: inline-block;
+    transform: rotate(90deg);
+    transition: transform .3s;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 10px 10px 10px 0px;
+    cursor: pointer;
+  }
+}
+
+.news-btn {
+  display: block;
+  width: 150px;
+  font-size: 18px;
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid #000;
+  margin: 0 auto;
+}
+
+.error {
+  color: crimson;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.news-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-body {
+  position: relative;
+  font-size: 14px;
+  padding: 0 0 40px 0;
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    max-height: 400px;
+    overflow: hidden;
+  }
+
+  &__link {
+    color: dodgerblue;
+    font-size: 18px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-weight: bold;
+  }
+}
+.pagination {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  &__btn {
+    border: 2px solid black;
+    background: transparent;
+    padding: 6px 10px;
+  }
+  &__input {
+    border: 2px solid black;
+    background: transparent;
+    height: 31px;
+    width: 60px;
+    text-align: right;
+    margin-left: 5px;
+    font-size: 17px;
+  }
+  span {
+    margin-right: 5px;
+  }
+}
